@@ -1,0 +1,140 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+
+#center-background-color-button{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.home-background-image{
+    width: 100%;
+    height: 100vh;
+    animation-name: change;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    position: absolute;
+}
+
+.shadow{
+    box-shadow: 2px 2px 2px black;
+}
+
+.background-color-button{
+    position: relative;
+    background: white;
+    cursor: pointer;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.color-options {
+    opacity: 0;
+    position: relative;
+}
+
+.color-box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.background-color-button:focus + .color-options{
+    opacity: 1;
+    transition: 0.5s;
+    position: relative;
+}
+
+.background-color-button:active{
+    transition: 100ms;
+    transform: translateY(3px);
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    border: solid black;
+    width: 167.35px;
+}
+
+.text{
+    text-decoration: none;
+    color: black;
+}
+
+.padding{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.home{
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+}
+
+.white{
+    background: white;
+}
+
+
+.red{
+    background: red;
+}
+
+.red:active + #center-background-color-button{
+    background: red;
+}
+
+.pink{
+    background: pink;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.green{
+    background: green;
+}
+
+.blue{
+    background: blue;
+}
+
+.cyan{
+    background: cyan;
+}
+
+.purple{
+    background: purple;
+}
+
+.brown{
+    background: brown;
+}
+
+.black{
+    background: black;
+    color: white;
+}
+
+@keyframes change{
+    0%{background: white;}
+    10%{background:red;}
+    20%{background:orange;}
+    30%{background:yellow;}
+    40%{background: green;}
+    50%{background:blue}
+    60%{background: purple;}
+    70%{background: brown;}
+    80%{background: black;}
+    90%{background: white;}
+    100%{background:blue;}
+}
